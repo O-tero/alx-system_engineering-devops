@@ -1,1 +1,2 @@
-#!/bin/bash \nls -al . .. /boot
+#!/bin/bash 
+ls -al . .. /boot
