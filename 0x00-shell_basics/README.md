@@ -1,1 +1,1 @@
-Display current directory contents, long format with user and group IDs displayed numerically and hidden files starting with .
+Creates a directory in the /tmp/ directory
