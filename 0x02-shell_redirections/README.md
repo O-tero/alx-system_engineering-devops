@@ -1,1 +1,1 @@
-script that prints new line to standard output
+displays content of file
