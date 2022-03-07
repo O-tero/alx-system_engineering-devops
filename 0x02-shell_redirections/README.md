@@ -1,1 +1,1 @@
-display content of passwd and hosts
+displays contents of passwd and hosts
