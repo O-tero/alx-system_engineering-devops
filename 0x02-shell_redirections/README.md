@@ -1,1 +1,1 @@
-display line containing the pattern root
+number of lines that contain bin in the file
