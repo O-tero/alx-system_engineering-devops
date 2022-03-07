@@ -1,1 +1,1 @@
-displays contents of passwd and hosts
+diplays 10 last lines
