@@ -1,1 +1,1 @@
-creates a file name ending by a new line
+creates a file ending by new line
