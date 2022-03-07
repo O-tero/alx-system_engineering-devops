@@ -1,1 +1,1 @@
-displays newest files in directory
+lists words as input and prints only words that appear once
