@@ -1,1 +1,1 @@
-lists words as input and prints only words that appear once
+display line containing the pattern root
