@@ -1,1 +1,1 @@
-duplicates last line of the file iacta
+deletes all files present in current directory and sub folders
