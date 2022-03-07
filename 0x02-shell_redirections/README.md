@@ -1,1 +1,1 @@
-lines containing pattern root and 3 lines after them
+display lines containing pattern root
