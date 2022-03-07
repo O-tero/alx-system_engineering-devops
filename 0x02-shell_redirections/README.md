@@ -1,1 +1,1 @@
-saves current state of directory
+duplicates last line of the file iacta
