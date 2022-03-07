@@ -1,1 +1,1 @@
-displays third line of the file
+creates a file name ending by a new line
