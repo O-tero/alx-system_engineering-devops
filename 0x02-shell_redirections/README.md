@@ -1,1 +1,1 @@
-number of lines that contain bin in the file
+lines containing pattern root and 3 lines after them
