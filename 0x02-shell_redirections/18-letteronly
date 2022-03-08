@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 #!/bin/bash
 grep ^[[:alpha:]] /etc/ssh/sshd_config
+=======
+#!/bin/bash 
+grep -i "^[[:alpha:]]" /etc/ssh/sshd_config
+>>>>>>> letter only please
