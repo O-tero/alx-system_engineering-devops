@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #prints a string 10 times
+
 x=0
 while [ $x != 10 ]
 do
