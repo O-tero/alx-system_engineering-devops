@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Fixing a bug: changing from port 8080 to 80
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+service nginx restart
