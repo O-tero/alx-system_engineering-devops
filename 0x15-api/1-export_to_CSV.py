@@ -1,34 +1,33 @@
 #!/usr/bin/python3
 """
-Python script to export data in the CSV format.
+Using https://jsonplaceholder.typicode.com
+gathers data from API and exports it to CSV file
+Implemented using recursion
 """
-import requests as r
-import csv
-from sys import argv
+import re
+import requests
+import sys
 
-if __name__ == "__main__":
-    employee_id = argv[1]
-    resp_user = r.get(
-        'https://jsonplaceholder.typicode.com/users/{}'.format(employee_id))
-    resp_todos = r.get(
-        'https://jsonplaceholder.typicode.com/users/{}/todos'.format(employee_id))
 
-    try:
-        users = resp_user.json()
-        user_todos = resp_todos.json()
-        csv_name = "{}.csv".format(users.get('id'))
+API = "https://jsonplaceholder.typicode.com"
+"""REST API url"""
 
-        with open(csv_name, mode='w', encoding='utf-8', newline='') as csv_data:
-            csv_writer = csv.writer(csv_data, quoting=csv.QUOTE_ALL)
 
-            for todo in user_todos:
-                row = [
-                    users.get('id'),
-                    users.get('username'),
-                    todo.get('completed'),
-                    todo.get('title')
-                ]
-                csv_writer.writerow(row)
-
-    except Exception as e:
-        print(e)
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        if re.fullmatch(r'\d+', sys.argv[1]):
+            id = int(sys.argv[1])
+            user_res = requests.get('{}/users/{}'.format(API, id)).json()
+            todos_res = requests.get('{}/todos'.format(API)).json()
+            user_name = user_res.get('username')
+            todos = list(filter(lambda x: x.get('userId') == id, todos_res))
+            with open('{}.csv'.format(id), 'w') as file:
+                for todo in todos:
+                    file.write(
+                        '"{}","{}","{}","{}"\n'.format(
+                            id,
+                            user_name,
+                            todo.get('completed'),
+                            todo.get('title')
+                        )
+                    )
